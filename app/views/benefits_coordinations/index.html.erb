@@ -1,0 +1,29 @@
+<h1>Listing benefits_coordinations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group or policy number</th>
+      <th>Payer responsibility</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @benefits_coordinations.each do |benefits_coordination| %>
+      <tr>
+        <td><%= benefits_coordination.group_or_policy_number %></td>
+        <td><%= benefits_coordination.payer_responsibility %></td>
+        <td><%= benefits_coordination.status %></td>
+        <td><%= link_to 'Show', benefits_coordination %></td>
+        <td><%= link_to 'Edit', edit_benefits_coordination_path(benefits_coordination) %></td>
+        <td><%= link_to 'Destroy', benefits_coordination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Benefits coordination', new_benefits_coordination_path %>

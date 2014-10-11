@@ -1,2 +1,9 @@
+sidebar :help do
+    ul do
+      li "Second List First Item"
+      li "Second List Second Item"
+    end
+  end
 <h3>Welcome</h3>
 <p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<p><%= button_to 'Managers:', managers_path, :method => :get %></p>

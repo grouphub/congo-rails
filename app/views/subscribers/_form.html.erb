@@ -1,0 +1,97 @@
+<%= form_for(@subscriber) do |f| %>
+  <% if @subscriber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+      <ul>
+      <% @subscriber.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :benefit_status %><br>
+    <%= f.text_field :benefit_status %>
+  </div>
+  <div class="field">
+    <%= f.label :benefits %><br>
+    <%= f.text_field :benefits %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_date %><br>
+    <%= f.date_select :birth_date %>
+  </div>
+  <div class="field">
+    <%= f.label :contacts %><br>
+    <%= f.text_field :contacts %>
+  </div>
+  <div class="field">
+    <%= f.label :eligibility_begin_date %><br>
+    <%= f.date_select :eligibility_begin_date %>
+  </div>
+  <div class="field">
+    <%= f.label :employment_status %><br>
+    <%= f.text_field :employment_status %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :group_or_policy_number %><br>
+    <%= f.text_field :group_or_policy_number %>
+  </div>
+  <div class="field">
+    <%= f.label :handicapped %><br>
+    <%= f.check_box :handicapped %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :maintenance_reason %><br>
+    <%= f.text_field :maintenance_reason %>
+  </div>
+  <div class="field">
+    <%= f.label :maintenance_type %><br>
+    <%= f.text_field :maintenance_type %>
+  </div>
+  <div class="field">
+    <%= f.label :member_id %><br>
+    <%= f.text_field :member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :relationship %><br>
+    <%= f.text_field :relationship %>
+  </div>
+  <div class="field">
+    <%= f.label :ssn %><br>
+    <%= f.number_field :ssn %>
+  </div>
+  <div class="field">
+    <%= f.label :subscriber_number %><br>
+    <%= f.text_field :subscriber_number %>
+  </div>
+  <div class="field">
+    <%= f.label :substance_abuse %><br>
+    <%= f.check_box :substance_abuse %>
+  </div>
+  <div class="field">
+    <%= f.label :tobacco_use %><br>
+    <%= f.check_box :tobacco_use %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group or policy number:</strong>
+  <%= @benefits_coordination.group_or_policy_number %>
+</p>
+
+<p>
+  <strong>Payer responsibility:</strong>
+  <%= @benefits_coordination.payer_responsibility %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @benefits_coordination.status %>
+</p>
+
+<%= link_to 'Edit', edit_benefits_coordination_path(@benefits_coordination) %> |
+<%= link_to 'Back', benefits_coordinations_path %>

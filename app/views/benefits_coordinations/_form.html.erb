@@ -1,0 +1,29 @@
+<%= form_for(@benefits_coordination) do |f| %>
+  <% if @benefits_coordination.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@benefits_coordination.errors.count, "error") %> prohibited this benefits_coordination from being saved:</h2>
+
+      <ul>
+      <% @benefits_coordination.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :group_or_policy_number %><br>
+    <%= f.text_field :group_or_policy_number %>
+  </div>
+  <div class="field">
+    <%= f.label :payer_responsibility %><br>
+    <%= f.text_field :payer_responsibility %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

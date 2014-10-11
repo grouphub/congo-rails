@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Begin date:</strong>
+  <%= @benefit.begin_date %>
+</p>
+
+<p>
+  <strong>Benefit type:</strong>
+  <%= @benefit.benefit_type %>
+</p>
+
+<p>
+  <strong>Coordination of benefits:</strong>
+  <%= @benefit.coordination_of_benefits %>
+</p>
+
+<p>
+  <strong>Late enrollment:</strong>
+  <%= @benefit.late_enrollment %>
+</p>
+
+<p>
+  <strong>Maintenance type:</strong>
+  <%= @benefit.maintenance_type %>
+</p>
+
+<%= link_to 'Edit', edit_benefit_path(@benefit) %> |
+<%= link_to 'Back', benefits_path %>

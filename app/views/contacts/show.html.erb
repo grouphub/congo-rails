@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Communication number one:</strong>
+  <%= @contact.communication_number_one %>
+</p>
+
+<p>
+  <strong>Integer:</strong>
+  <%= @contact.integer %>
+</p>
+
+<p>
+  <strong>Communication type one:</strong>
+  <%= @contact.communication_type_one %>
+</p>
+
+<p>
+  <strong>Communication number two:</strong>
+  <%= @contact.communication_number_two %>
+</p>
+
+<p>
+  <strong>Communication type:</strong>
+  <%= @contact.communication_type %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
