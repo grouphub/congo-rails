@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @payer.name %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @payer.tax_id %>
+</p>
+
+<%= link_to 'Edit', edit_payer_path(@payer) %> |
+<%= link_to 'Back', payers_path %>
